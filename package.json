@@ -1,6 +1,6 @@
 {
-  "name": "sprom",
-  "version": "0.1.0",
+  "name": "spreadprom",
+  "version": "1.0.0",
   "description": "A tiny library for making promises spreadable",
   "main": "sprom.js",
   "type": "module",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pbxx/sprom.git"
+    "url": "git+https://github.com/pbxx/spreadprom.git"
   },
   "author": "Donavan Lewis",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pbxx/sprom/issues"
+    "url": "https://github.com/pbxx/spreadprom/issues"
   },
-  "homepage": "https://github.com/pbxx/sprom#readme",
+  "homepage": "https://github.com/pbxx/spreadprom#readme",
   "dependencies": {
     "chai": "^5.1.0",
     "mocha": "^10.4.0",
