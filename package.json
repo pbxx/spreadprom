@@ -1,6 +1,6 @@
 {
   "name": "spreadprom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tiny library for making promises spreadable",
   "main": "sprom.js",
   "type": "module",
@@ -20,9 +20,8 @@
     "url": "https://github.com/pbxx/spreadprom/issues"
   },
   "homepage": "https://github.com/pbxx/spreadprom#readme",
-  "dependencies": {
+  "devDependencies": {
     "chai": "^5.1.0",
-    "mocha": "^10.4.0",
-    "save-dev": "^0.0.1-security"
+    "mocha": "^10.4.0"
   }
 }
