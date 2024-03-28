@@ -1,0 +1,28 @@
+{
+  "name": "sprom",
+  "version": "0.1.0",
+  "description": "A tiny library for making promises spreadable",
+  "main": "sprom.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbxx/sprom.git"
+  },
+  "author": "Donavan Lewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pbxx/sprom/issues"
+  },
+  "homepage": "https://github.com/pbxx/sprom#readme",
+  "dependencies": {
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0",
+    "save-dev": "^0.0.1-security"
+  }
+}
