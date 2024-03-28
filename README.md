@@ -15,7 +15,7 @@ npm install spreadprom
 import sprom from "spreadprom"
 ```
 
-Use spreadprom to gracefully catch promise errors without try-catch blocks:
+Use spreadprom to gracefully catch promise errors without try-catch blocks: 
 
 ```js
 var [err, result] = await sprom( myPromise() )
