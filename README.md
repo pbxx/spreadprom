@@ -1,4 +1,4 @@
-![AppVeyor tests](https://img.shields.io/appveyor/tests/pbxx/spreadprom)
+![AppVeyor tests](https://img.shields.io/appveyor/tests/pbxx/spreadprom?)
 ![npm version](https://img.shields.io/npm/v/spreadprom)
 
 
