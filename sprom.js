@@ -1,8 +1,1 @@
-const sprom = (promise) => {
-    return promise.then((resultParam) => [null, resultParam]).catch((err) => [err])
-}
-const osprom = (promise) => {
-    return promise.then((result) => {return {result}}).catch((err) => {return {err}})
-}
-export default sprom
-export { sprom, osprom }
+const sprom=o=>o.then((o=>[null,o])).catch((o=>[o])),osprom=o=>o.then((o=>({result:o}))).catch((o=>({err:o})));export default sprom;export{sprom,osprom};
