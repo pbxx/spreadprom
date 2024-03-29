@@ -20,11 +20,20 @@ Use `sprom` to gracefully catch promise errors without try-catch blocks:
 
 ```js
 var [err, result] = await sprom( myPromise() )
-if (err) { throw err }
+if ( err ) { throw err }
 
 // or
 
-var results = [ ...await sprom( myPromise() ) ]
-if (results[0]) { throw results[0] }
+var myItem = [ ...await sprom( myPromise() ) ]
+//  => [err, result]
+if ( myItem[0] ) { throw myItem[0] }
 ```
 
+Use included function `osprom` (short for object-sprom) to resolve into an object instead:
+```js
+import { osprom } from "spreadprom"
+
+const myItem = await osprom( myPromise() )
+// => {err, result}
+if ( myItem.err ) { throw myItem.err }
+```

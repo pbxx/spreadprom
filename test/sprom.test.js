@@ -1,4 +1,5 @@
-import sprom from "../sprom.js"
+import { sprom, osprom } from "../sprom.js"
+// import sprom from "../sprom.js"
 import { expect } from "chai"
 
 async function willReturn() {
@@ -9,16 +10,16 @@ async function willError() {
 }
 
 // Mode A
-it("should return correct values while being unpacked into variables", async () => {
-	var [err, result] = await sprom(willReturn())
+it("sprom into array definition: should work on resolve", async () => {
+	const [err, result] = await sprom(willReturn())
 	// expect(results).to.be.an("array").that.is.not.empty
 	// console.log(Array.isArray(results))
 	expect(err).to.not.be.ok
 	expect(result).to.be.ok
 	return
 })
-it("should return correct values on error while being unpacked into variables", async () => {
-	var [err, result] = await sprom(willError())
+it("sprom into array definition: should work on error", async () => {
+	const [err, result] = await sprom(willError())
 	// expect(results).to.be.an("array").that.is.not.empty
 	// console.log(Array.isArray(results))
 	expect(result).to.not.be.ok
@@ -28,8 +29,8 @@ it("should return correct values on error while being unpacked into variables", 
 })
 
 // Mode B
-it("should return a complete result array while being spread into an array", async () => {
-	let results = [...(await sprom(willReturn()))]
+it("sprom into array: should work on resolve", async () => {
+	const results = [...(await sprom(willReturn()))]
 	// expect(results).to.be.an("array").that.is.not.empty
 	// console.log(Array.isArray(results))
 	expect(results).to.be.an("array")
@@ -37,8 +38,8 @@ it("should return a complete result array while being spread into an array", asy
 	expect(results[1]).to.be.ok
 	return
 })
-it("should return a complete failed result array while being spread into an array", async () => {
-	let results = [...(await sprom(willError()))]
+it("sprom into array: should work on error", async () => {
+	const results = [...(await sprom(willError()))]
 	// expect(results).to.be.an("array").that.is.not.empty
 	// console.log(Array.isArray(results))
 	expect(results).to.be.an("array")
@@ -48,3 +49,40 @@ it("should return a complete failed result array while being spread into an arra
 
 	return
 })
+
+// osprom
+it("osprom into variable: should work on resolve", async () => {
+	let res = await osprom(willReturn())
+	// expect(results).to.be.an("array").that.is.not.empty
+	// console.log(Array.isArray(results))
+	// console.log(res)
+	expect(res).to.be.an("object")
+	expect(res.err).to.not.be.ok
+	expect(res.result).to.be.ok
+	return
+})
+it("osprom into variable: should work on error", async () => {
+	let res = await osprom(willError())
+	// expect(results).to.be.an("array").that.is.not.empty
+	// console.log(Array.isArray(results))
+	// console.log(res)
+	expect(res).to.be.an("object")
+	expect(res.result).to.not.be.ok
+	expect(res.err).to.be.ok
+	return
+})
+
+
+/*
+it("speed test of regular try catch block", async () => {
+	var result
+    try {
+        result = await willReturn()
+    } catch (err) {
+        throw err
+    }
+	// expect(err).to.not.be.ok
+	expect(result).to.be.ok
+	return
+})
+*/
