@@ -2,7 +2,7 @@
   "name": "spreadprom",
   "version": "1.2.0",
   "description": "A tiny library for making promises spreadable",
-  "main": "sprom.js",
+  "main": "built/sprom.js",
   "directories": {
     "test": "test"
   },
