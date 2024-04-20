@@ -1,13 +1,14 @@
 {
   "name": "spreadprom",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A tiny library for making promises spreadable",
-  "main": "built/sprom.js",
+  "main": "dist/sprom.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --slow 0"
+    "build": "tsc",
+    "test": "tsc && mocha --slow 0"
   },
   "repository": {
     "type": "git",
