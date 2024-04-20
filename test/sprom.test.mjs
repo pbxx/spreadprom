@@ -1,4 +1,4 @@
-import { sprom, osprom } from "../sprom.js"
+import { sprom, osprom } from "../built/sprom.js"
 // import sprom from "../sprom.js"
 import { expect } from "chai"
 
