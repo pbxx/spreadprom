@@ -14,9 +14,7 @@ npm install spreadprom
 
 ```js
 const sprom = require("spreadprom")
-```
-Or
-```js
+// or
 import sprom from "spreadprom"
 ```
 
@@ -35,12 +33,10 @@ if ( myItem[0] ) { throw myItem[0] }
 
 Use included function `osprom` (short for object-sprom) to resolve into an object instead:
 ```js
-import { osprom } from "spreadprom"
-// or
 const { sprom, osprom } = require("spreadprom")
-```
+// or
+import { sprom, osprom } from "spreadprom"
 
-```js
 const myItem = await osprom( myPromise() )
 // => {err, result}
 if ( myItem.err ) { throw myItem.err }
