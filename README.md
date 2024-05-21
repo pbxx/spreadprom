@@ -13,7 +13,7 @@ npm install spreadprom
 # Usage
 
 ```js
-const sprom = require("spreadprom")
+const { sprom } = require("spreadprom")
 // or
 import sprom from "spreadprom"
 ```

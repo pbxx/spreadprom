@@ -1,6 +1,6 @@
 {
   "name": "spreadprom",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A tiny library for making promises spreadable",
   "main": "dist/sprom.js",
   "types": "dist/sprom.d.ts",
