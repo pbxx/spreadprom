@@ -6,8 +6,13 @@
  * @param promise A promise for sprom to handle.
  * @returns 
  */
-const sprom = (promise: Promise<any>) => {
-    return promise.then((resultParam) => [null, resultParam]).catch((err) => [err])
+const sprom = async (promise: Promise<any>) => {
+    try {
+        const resultParam = await promise
+        return [null, resultParam]
+    } catch (err) {
+        return [err]
+    }
 }
 /**
  * ### `osprom`
@@ -19,8 +24,13 @@ const sprom = (promise: Promise<any>) => {
  * @param promise A promise for sprom to handle.
  * @returns 
  */
-const osprom = (promise: Promise<any>) => {
-    return promise.then((result) => {return {result}}).catch((err) => {return {err}})
+const osprom = async (promise: Promise<any>) => {
+    try {
+        const result = await promise
+        return { result }
+    } catch (err) {
+        return { err }
+    }
 }
 export default sprom
 export { sprom, osprom }
